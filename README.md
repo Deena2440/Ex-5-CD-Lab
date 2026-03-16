@@ -73,6 +73,25 @@ void yyerror(const char *msg) {
 ```
 
 # OUTPUT
+```
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
 
+C:\Dev-Cpp\TDM-GCC-64\bin>flex exp5_0058.l
+
+C:\Dev-Cpp\TDM-GCC-64\bin>bison -dy exp5_0058.y
+
+C:\Dev-Cpp\TDM-GCC-64\bin>gcc y.tab.c lex.yy.c -w
+
+C:\Dev-Cpp\TDM-GCC-64\bin>a.exe
+Enter a string (aⁿb where n >= 10):
+aab
+Invalid: Less than 10 a's
+
+C:\Dev-Cpp\TDM-GCC-64\bin>a.exe
+Enter a string (aⁿb where n >= 10):
+aaaaaaaaaaab
+Valid string: 11 a's followed by b
+```
 # RESULT
 The YACC program to recognize the grammar anb where n>=10 is executed successfully and the output is verified.
